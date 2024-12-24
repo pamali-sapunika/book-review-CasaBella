@@ -4,9 +4,9 @@
 
 ✨ Developed with Spring Boot and Angular 18<br>
 🍃 Add, View, Modify, and Delete Reviews<br>
-Discover books by title, complete with their dynamically calculated average rating value using a query<br>
-User Authentication to add, edit or delete review<br>
-Filter by Review Date, rating or both variables<br>
+🍃 Discover books by title, complete with their dynamically calculated average rating value using a query<br>
+💡 User Authentication to add, edit or delete review<br>
+🍃 Filter by Review Date, rating or both variables<br>
 
 1. Navigate to the home page to begin
 2. Home pagedisplays a list of books along with their calculated average ratings with a query. Use the search bar to filter books by their title
