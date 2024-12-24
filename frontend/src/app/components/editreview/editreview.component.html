@@ -1,0 +1,39 @@
+<div>
+    <div class="line-container">
+      <div class="line"></div>
+      <img src="assets/logo2.png" alt="Icon" class="icon" />
+      <div class="line"></div>
+    </div>
+    <div class="subdiscover">Edit Review</div>
+  </div>
+  <div class="container">
+    <h2>Edit Review</h2>
+    <form [formGroup]="reviewForm" (ngSubmit)="onSubmit()">
+
+      <p>Original review date: {{ originalDate }} </p>
+      <p>New Date: {{ currentDate }}</p>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Book Name</mat-label>
+        <input matInput formControlName="bookTitle" required />
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Author</mat-label>
+        <input matInput formControlName="author" required />
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Rating</mat-label>
+        <input type="number" matInput formControlName="rating" required />
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Review</mat-label>
+        <textarea matInput formControlName="reviewText" required></textarea>
+      </mat-form-field>
+  
+      <button mat-raised-button color="primary" type="submit">Save Changes</button>
+    </form>
+  </div>
+  

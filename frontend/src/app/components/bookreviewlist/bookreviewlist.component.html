@@ -1,0 +1,101 @@
+<div>
+  <div class="line-container">
+    <div class="line"></div>
+    <img src="assets/logo2.png" alt="Icon" class="icon" />
+    <div class="line"></div>
+  </div>
+  <div class="subdiscover">Book Reviews</div>
+</div>
+<div>
+  <div>
+    <button mat-button color="primary" (click)="navigateAddReview()">Add Review</button>
+  </div>
+
+
+  <mat-card class="hotel-list-card">
+    <mat-card-header>
+      <mat-card-title class="reviewlisttitle">Review List</mat-card-title>
+      <mat-card-subtitle class="reviewsubtopic">View all available reviews</mat-card-subtitle>
+    </mat-card-header>
+    
+    <mat-card-content>
+      <div class="search-bar">
+        <!-- <mat-form-field appearance="fill">
+          <mat-label>Search by Date</mat-label>
+          <input matInput [formControl]="searchDate" placeholder="YYYY-MM-DD" />
+        </mat-form-field> -->
+        <mat-form-field appearance="fill">
+          <mat-label>Search by Date</mat-label>
+          <input matInput [matDatepicker]="picker" [formControl]="searchDate" placeholder="YYYY-MM-DD" />
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>   
+        
+        <!-- Rating Filter -->
+        <mat-form-field appearance="fill">
+          <mat-label>Search by Rating</mat-label>
+          <mat-select [formControl]="searchRating">
+            <mat-option *ngFor="let rating of [1, 2, 3, 4, 5]" [value]="rating">
+              {{ rating }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" (click)="resetFilters()">Reset Filters</button>
+        
+      </div>
+      <div class="table-container">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  
+          <!-- Review ID Column -->
+          <ng-container matColumnDef="reviewId">
+            <th mat-header-cell *matHeaderCellDef> Review ID </th>
+            <td mat-cell *matCellDef="let review"> {{review.reviewId}} </td>
+          </ng-container>
+  
+          <!-- Book Name Column -->
+          <ng-container matColumnDef="bookTitle">
+            <th mat-header-cell *matHeaderCellDef> Book Name </th>
+            <td mat-cell *matCellDef="let review"> {{review.bookTitle}} </td>
+          </ng-container>
+  
+          <!-- Author Column -->
+          <ng-container matColumnDef="author">
+            <th mat-header-cell *matHeaderCellDef> Author </th>
+            <td mat-cell *matCellDef="let review"> {{review.author}} </td>
+          </ng-container>
+  
+          <!-- Rating Column -->
+          <ng-container matColumnDef="rating">
+            <th mat-header-cell *matHeaderCellDef> Rating  </th>
+            <td mat-cell *matCellDef="let review"> {{review.rating}} </td>
+          </ng-container>
+  
+          <!-- Review Text Column -->
+          <ng-container matColumnDef="reviewText">
+            <th mat-header-cell *matHeaderCellDef> Review </th>
+            <td mat-cell *matCellDef="let review"> {{review.reviewText}} </td>
+          </ng-container>
+  
+          <!-- Date Column -->
+          <ng-container matColumnDef="reviewDate">
+            <th mat-header-cell *matHeaderCellDef> Date </th>
+            <td mat-cell *matCellDef="let review"> {{ review.reviewDate }} </td>
+          </ng-container>
+  
+  
+          <!-- Actions Column -->
+          <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef> Actions </th>
+            <td mat-cell *matCellDef="let review">
+              <button mat-button color="primary" (click)="viewReview(review.reviewId)">View Review</button>
+            </td>
+          </ng-container>
+  
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+      </div>
+    </mat-card-content>
+  </mat-card>  
+</div>

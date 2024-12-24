@@ -1,0 +1,92 @@
+<div class="bigcontainer">
+  <div class="logo-container">
+    <img src="assets/bg1.jpeg"  width="auto" height="auto" />
+    <div class="text-overlay">
+      <div class="welcometo">Welcome to </div>
+      <div class="casabella">CasaBella</div>
+      <p class="discover">Enter your feel paradise </p>
+
+    </div>
+  </div>
+
+
+  <div>
+    <div class="line-container">
+      <div class="line"></div>
+      <img src="assets/logo2.png" alt="Icon" class="icon" />
+      <div class="line"></div>
+    </div>
+    <div class="subdiscover">Discover your favourite books</div>
+  </div>
+
+  <!-- <div class="book-ratings-container">
+    <div *ngIf="averageRatings.length > 0">
+      <mat-card *ngFor="let rating of averageRatings" class="book-rating-card">
+        <mat-card-header>
+          <mat-card-title>{{ rating.bookTitle }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p><strong>Average Rating:</strong> {{ rating.averageRating | number:'1.1-1' }}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div *ngIf="averageRatings.length === 0">
+      <p>No book ratings available.</p>
+    </div>
+  </div> -->
+
+  <div class="filter-container">
+    <p class="searchtext">Out top Books with Average rating</p>
+    <input
+      type="text"
+      placeholder="Search books by title..."
+      [(ngModel)]="filterText"
+      (input)="filterRatings()"
+    />
+  </div>
+
+
+  <!-- <div class="book-ratings-container">
+    <div *ngIf="averageRatings.length > 0">
+      <mat-card *ngFor="let rating of averageRatings" class="book-rating-card">
+        <div class="card-content">
+          <mat-card-header>
+            <mat-card-title class="cardtitle">{{ rating.bookTitle }}</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <p class="cardData">Average Rating: {{ rating.averageRating | number:'1.1-1' }}</p>
+          </mat-card-content>
+        </div>
+        <div class="card-image">
+          <img src="assets/book1.jpeg" alt="Book image" />
+        </div>
+      </mat-card>
+    </div>
+    <div *ngIf="averageRatings.length === 0">
+      <p>No book ratings available.</p>
+    </div>
+  </div> -->
+
+  <div *ngIf="filteredRatings.length > 0">
+    <mat-card *ngFor="let rating of filteredRatings" class="book-rating-card">
+      <div class="card-content">
+        <mat-card-header>
+          <mat-card-title class="cardtitle">{{ rating.bookTitle }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p class="cardData">
+            Average Rating: {{ rating.averageRating | number: '1.1-1' }}
+          </p>
+        </mat-card-content>
+      </div>
+      <div class="card-image">
+        <img src="assets/book1.jpeg" alt="Book image" />
+      </div>
+    </mat-card>
+  </div>
+  <div *ngIf="filteredRatings.length === 0">
+    <p>No book ratings available for the entered title.</p>
+  </div>
+
+</div>
+  

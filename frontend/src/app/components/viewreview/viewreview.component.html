@@ -1,0 +1,59 @@
+<div>
+  <div>
+    <div class="line-container">
+      <div class="line"></div>
+      <img src="assets/logo2.png" alt="Icon" class="icon" />
+      <div class="line"></div>
+    </div>
+    <div class="subdiscover">Book Review</div>
+  </div>
+
+  <div class="subcontainer">
+  <p class="reviewheader">Book Review</p>
+
+    <!-- <mat-card *ngIf="review" class="cardd">
+        <mat-card-header>
+          <mat-card-title>{{ review.bookTitle }}</mat-card-title>
+          <mat-card-subtitle>{{ review.author }}</mat-card-subtitle>
+        </mat-card-header>
+      
+        <mat-card-content>
+          <p><strong>Review:</strong> {{ review.reviewText }}</p>
+          <p class="datee"><strong>Review date</strong> {{ formattedDate  }}</p>
+          <p class="rating">Rating: {{ review.rating }}</p>
+        </mat-card-content>
+        
+        <mat-card-actions>
+          <button mat-button (click)="editReview()">Edit Review</button>
+          <button mat-button (click)="deleteReview()">Delete Review</button>
+        </mat-card-actions>
+    </mat-card> -->
+
+    <div class="restspace-container">
+      <div class="about-section">
+        <div class="about-content">
+          <div>
+            <div class="line-container">
+              <img src="assets/logo2.png" alt="Icon" class="icon1" />
+            </div>
+          </div>
+          
+          <h3 class="intro">{{ review.author }}</h3>
+          <h2 class="introsub">{{ review.bookTitle }}</h2>
+          <p class="introdes">
+            {{ review.reviewText }}
+          </p>
+          <p class="'datee">original date: {{ formattedDate }}</p>
+          <p class="rating">Rating: {{ review.rating }}</p>
+
+          <div class="actions">
+            <button mat-button (click)="editReview()">Edit Review</button>
+            <button mat-button (click)="deleteReview()">Delete Review</button>
+          </div>
+        </div>
+        <img src="..\assets\book2.jpeg" alt="About Us" class="about-image" />
+      </div>
+  </div>
+</div>
+
+

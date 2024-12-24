@@ -1,0 +1,64 @@
+<div>
+  <div class="line-container">
+    <div class="line"></div>
+    <img src="assets/logo2.png" alt="Icon" class="icon" />
+    <div class="line"></div>
+  </div>
+  <div class="subdiscover">Add New Review</div>
+</div>
+<div class="container">
+  <h2>Add New Review <span class="topicbreak">for any book you read</span></h2>
+  <form [formGroup]="reviewForm" (ngSubmit)="onSubmit()">
+
+    <p class="currentdate">Today date: {{ currentDate }}</p>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Book Name</mat-label>
+      <input matInput formControlName="bookTitle" required />
+    </mat-form-field>
+
+    <!-- <mat-form-field appearance="fill">
+      <mat-label>Book Name</mat-label>
+      <mat-select formControlName="bookTitle" (selectionChange)="handleBookTitleChange($event)">
+        <mat-option *ngFor="let title of bookTitles" [value]="title">{{ title }}</mat-option>
+        <mat-option value="custom">Other...</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div *ngIf="showCustomBookInput">
+      <mat-form-field appearance="fill">
+        <mat-label>Enter Book Name</mat-label>
+        <input matInput formControlName="customBookTitle" />
+      </mat-form-field>
+    </div> -->
+
+    <mat-form-field appearance="fill">
+      <mat-label>Author</mat-label>
+      <input matInput formControlName="author" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Rating</mat-label>
+      <input matInput formControlName="rating" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Review</mat-label>
+      <input matInput formControlName="reviewText" required />
+    </mat-form-field>
+
+    <!-- <mat-form-field appearance="fill">
+      <mat-label>Date</mat-label>
+      <input matInput formControlName="reviewDate" required />
+    </mat-form-field> -->
+
+    <!-- <mat-form-field appearance="fill">
+      <mat-label>Review Date</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="reviewDate" />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>     -->
+
+    <button mat-raised-button color="primary" type="submit">Add Review</button>
+  </form>
+</div>
