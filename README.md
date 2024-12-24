@@ -6,9 +6,9 @@
 🍃 Add, View, Modify, and Delete Reviews<br>
 🍃 Discover books by title, complete with their dynamically calculated average rating value using a query<br>
 💡 User Authentication to add, edit or delete review<br>
-🍃 Filter by Review Date, rating or both variables<br>
+🍃 Filter by Review Date, rating or both variables<br><br>
 
-🦋 Users can choose the book title from the dropdown if it has already been reviewed. For books with no prior reviews, feature to add a new book title selecting option 'other'<br>
+🦋 Users can choose the book title from the dropdown if it has already been reviewed. For books with no prior reviews, feature to add a new book title selecting option 'other'<br><br>
 
 1. Navigate to the home page to begin
 2. Home pagedisplays a list of books along with their calculated average ratings with a query. Use the search bar to filter books by their title
