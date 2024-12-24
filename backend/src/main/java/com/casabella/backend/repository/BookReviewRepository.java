@@ -14,6 +14,7 @@ public interface BookReviewRepository extends JpaRepository<BookReview, Long>{
     @Query("SELECT r FROM BookReview r WHERE r.bookTitle = ?1")
     Optional<BookReview> findReviewByBook(String bookTitle);
 
+    //query to book filter
     @Query(
         "SELECT new com.casabella.backend.dto.AvgRatingDTO(b.bookTitle, AVG(b.rating)) " +
         "FROM BookReview b " +

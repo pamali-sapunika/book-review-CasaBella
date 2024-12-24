@@ -68,6 +68,18 @@ export class AddReviewComponent {
     }
   }
 
+  onBookTitleChange(event: any): void {
+    this.showCustomBookInput = event.value === 'custom';
+    if (!this.showCustomBookInput) {
+      this.reviewForm.get('bookTitle')?.setValue(event.value); // Set the selected value
+    }
+  }
+
+  updateBookTitle(event: any): void {
+    const customTitle = event.target.value;
+    this.reviewForm.get('bookTitle')?.setValue(customTitle); // Update the bookTitle with the entered value
+  }
+  
   // onSubmit(): void {
   //   if (this.reviewForm.valid) {
   //     let bookTitle = this.reviewForm.value.bookTitle;
