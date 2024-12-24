@@ -4,8 +4,9 @@
         <span class="themefont">CasaBella</span>
         <span class="spacer"></span>
         <a mat-button routerLink="/home" >Home</a>
-        <a mat-button routerLink="/addReview">Add Review</a>
         <a mat-button routerLink="/allReviews">Book Reviews</a>
+        <a mat-button routerLink="/addReview">Add Review</a>
+   
        
         <!-- Conditional button rendering based on isLoggedIn -->
         <ng-container *ngIf="isLoggedIn; else loggedOut">

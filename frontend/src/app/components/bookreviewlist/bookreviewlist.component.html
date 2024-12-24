@@ -7,8 +7,8 @@
   <div class="subdiscover">Book Reviews</div>
 </div>
 <div>
-  <div>
-    <button mat-button color="primary" (click)="navigateAddReview()">Add Review</button>
+  <div class="btncontainer">
+    <button mat-button color="primary" class="search-button" (click)="navigateAddReview()">Add Review</button>
   </div>
 
 
@@ -29,10 +29,10 @@
           <input matInput [matDatepicker]="picker" [formControl]="searchDate" placeholder="YYYY-MM-DD" />
           <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
           <mat-datepicker #picker></mat-datepicker>
-        </mat-form-field>   
+        </mat-form-field>
         
         <!-- Rating Filter -->
-        <mat-form-field appearance="fill">
+        <mat-form-field class="rate-search" appearance="fill">
           <mat-label>Search by Rating</mat-label>
           <mat-select [formControl]="searchRating">
             <mat-option *ngFor="let rating of [1, 2, 3, 4, 5]" [value]="rating">
@@ -41,7 +41,8 @@
           </mat-select>
         </mat-form-field>
 
-        <button mat-raised-button color="primary" (click)="resetFilters()">Reset Filters</button>
+        <button mat-raised-button color="primary"  class="search-button" (click)="resetFilters()">Reset Filters</button>
+
         
       </div>
       <div class="table-container">
@@ -88,7 +89,7 @@
           <ng-container matColumnDef="actions">
             <th mat-header-cell *matHeaderCellDef> Actions </th>
             <td mat-cell *matCellDef="let review">
-              <button mat-button color="primary" (click)="viewReview(review.reviewId)">View Review</button>
+              <button mat-button color="primary" class="search-button2" (click)="viewReview(review.reviewId)">View Review</button>
             </td>
           </ng-container>
   

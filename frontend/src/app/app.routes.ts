@@ -29,9 +29,9 @@ export const routes: Routes = [
         children: [
             {path: 'home', component: HomeComponent},
             {path: 'register', component: RegisterComponent},
-            {path: 'addReview',component: AddReviewComponent},
-            {path: 'allReviews',component: BookReviewlistComponent, canActivate: [authGuard]},
-            {path: 'bookReview/:reviewId',component: ViewreviewComponent, canActivate: [authGuard]},
+            {path: 'addReview',component: AddReviewComponent, canActivate: [authGuard]},
+            {path: 'allReviews',component: BookReviewlistComponent},
+            {path: 'bookReview/:reviewId',component: ViewreviewComponent},
             {path: 'editreview/:reviewId', component: EditreviewComponent, canActivate: [authGuard]},
         ]
     }

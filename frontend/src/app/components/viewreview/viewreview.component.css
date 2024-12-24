@@ -41,6 +41,21 @@
     margin-top: 20px;
  
   }
+
+  .line-container2 {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    margin-top: 20px;
+ 
+  }
+
+  .icon2{
+    width: 35px;
+    height: 35px;
+    align-self: space-around;
+    justify-content: flex-start;
+  }
   
   .line {
     width: 300px;
@@ -71,7 +86,8 @@
 }
 
 .datee{
-    margin-top: 30px;
+    margin-top: 70px;
+    font-size: 14px;
     font-family: "Julius Sans One", sans-serif;
 }
 
@@ -205,9 +221,32 @@ mat-card-subtitle{
     height: 24px;
   }
   
-  .icon1{
-    width: 24px;
-    height: 24px;
-    align-self: space-around;
-    justify-content: flex-start;
+
+
+  .edtbtn {
+    padding: 15px 30px;
+    background-color: #FFBA1A;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: lighter;
+    margin-left: 20px;
+  }
+
+  .delbtn {
+    padding: 15px 30px;
+    background-color: #db5d40;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: lighter;
+    margin-left: 20px;
+  }
+
+  .actions{
+    margin-top: 80px;
   }

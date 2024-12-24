@@ -17,6 +17,34 @@
     margin-top: 75px;
     text-align: center;
 }
+
+.search-button {
+  padding: 15px 30px;
+  background-color: #FFBA1A;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 20px;
+}
+
+.search-button2 {
+  padding: 15px 30px;
+  background-color: #8a8988;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: lighter;
+  margin-left: 20px;
+}
+
+
+.rate-search{
+  margin-left: 20px;
+}
   
 .subdiscover {
     font-family: "Julius Sans One", sans-serif;
@@ -24,7 +52,7 @@
     margin-top: 20px;
     font-size: 16px;
 }
-  
+
 .line-container {
     display: flex;
     align-items: center;
@@ -91,6 +119,14 @@
   .card-subtitle {
     font-size: 16px;
     color: #666;
+  }
+
+  .btncontainer{
+    display: flex;
+    justify-content: flex-end; /* Align the button to the right */
+    margin-bottom: 20px; /* Optional: Adds space below the button */
+    margin-right: 20px;
+
   }
   
   /* Table container */

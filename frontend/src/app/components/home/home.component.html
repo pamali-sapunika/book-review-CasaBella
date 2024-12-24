@@ -1,10 +1,10 @@
 <div class="bigcontainer">
   <div class="logo-container">
-    <img src="assets/bg1.jpeg"  width="auto" height="auto" />
+    <img src="assets/bg3.jpeg"  width="auto" height="auto" />
     <div class="text-overlay">
       <div class="welcometo">Welcome to </div>
       <div class="casabella">CasaBella</div>
-      <p class="discover">Enter your feel paradise </p>
+      <p class="discover">Discover and share your thoughts on books with our Book Review App. Explore reviews, <br>rate your favorite reads, and connect with a community of book lovers!</p>
 
     </div>
   </div>
@@ -36,7 +36,7 @@
   </div> -->
 
   <div class="filter-container">
-    <p class="searchtext">Out top Books with Average rating</p>
+    <p class="searchtext">Discover the stories that captivate hearts and minds, highlighted by their outstanding <span class="avgrate">average ratings</span></p>
     <input
       type="text"
       placeholder="Search books by title..."
@@ -67,7 +67,7 @@
     </div>
   </div> -->
 
-  <div *ngIf="filteredRatings.length > 0">
+  <div *ngIf="filteredRatings.length > 0" class="book-ratings-container">
     <mat-card *ngFor="let rating of filteredRatings" class="book-rating-card">
       <div class="card-content">
         <mat-card-header>
@@ -75,7 +75,7 @@
         </mat-card-header>
         <mat-card-content>
           <p class="cardData">
-            Average Rating: {{ rating.averageRating | number: '1.1-1' }}
+            Average Rating: <span class="avgvalue">{{ rating.averageRating | number: '1.1-1' }}</span>
           </p>
         </mat-card-content>
       </div>
@@ -84,9 +84,7 @@
       </div>
     </mat-card>
   </div>
-  <div *ngIf="filteredRatings.length === 0">
-    <p>No book ratings available for the entered title.</p>
-  </div>
+  
 
 </div>
   

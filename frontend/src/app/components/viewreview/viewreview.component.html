@@ -33,8 +33,8 @@
       <div class="about-section">
         <div class="about-content">
           <div>
-            <div class="line-container">
-              <img src="assets/logo2.png" alt="Icon" class="icon1" />
+            <div class="line-container2">
+              <img src="assets/logo2.png" alt="Icon" class="icon2" />
             </div>
           </div>
           
@@ -43,12 +43,12 @@
           <p class="introdes">
             {{ review.reviewText }}
           </p>
-          <p class="'datee">original date: {{ formattedDate }}</p>
+          <p class="datee">original date: {{ formattedDate }}</p>
           <p class="rating">Rating: {{ review.rating }}</p>
 
           <div class="actions">
-            <button mat-button (click)="editReview()">Edit Review</button>
-            <button mat-button (click)="deleteReview()">Delete Review</button>
+            <button mat-button (click)="editReview()" class="edtbtn">Edit Review</button>
+            <button mat-button (click)="deleteReview()" class="delbtn">Delete Review</button>
           </div>
         </div>
         <img src="..\assets\book2.jpeg" alt="About Us" class="about-image" />

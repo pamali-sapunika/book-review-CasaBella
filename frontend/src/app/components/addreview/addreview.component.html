@@ -59,6 +59,16 @@
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>     -->
 
-    <button mat-raised-button color="primary" type="submit">Add Review</button>
+    <button mat-raised-button color="primary"  class="search-button" type="submit">Add Review</button>
   </form>
+
+  <!-- Book Titles Section -->
+  <div class="book-titles-container">
+    <h3>Available Book Titles</h3>
+    <ul>
+      <li *ngFor="let title of bookTitles" class="book-title">
+        {{ title }}
+      </li>
+    </ul>
+  </div>
 </div>

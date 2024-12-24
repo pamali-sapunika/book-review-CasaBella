@@ -68,4 +68,15 @@
   .topicbreak{
     font-size: 20px;
   }
+
+  .search-button {
+    padding: 15px 30px;
+    background-color: #FFBA1A;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 20px;
+  }
   

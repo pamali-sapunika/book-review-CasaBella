@@ -96,26 +96,26 @@ export class AddReviewComponent {
   // }
 
 
-  // ngOnInit(): void {
-  //   this.fetchReviews();
-  // }
+  ngOnInit(): void {
+    this.fetchReviews();
+  }
 
-  // fetchReviews(): void {
-  //   this.bookReviewService.getReviews().subscribe(
-  //     (reviews: BookReview[]) => {
-  //       this.reviews = reviews;
-  //       this.bookTitles = this.getUniqueBookTitles(reviews);
-  //     },
-  //     (error) => {
-  //       console.error('Error fetching reviews:', error);
-  //     }
-  //   );
-  // }
+  fetchReviews(): void {
+    this.bookReviewService.getReviews().subscribe(
+      (reviews: BookReview[]) => {
+        this.reviews = reviews;
+        this.bookTitles = this.getUniqueBookTitles(reviews);
+      },
+      (error) => {
+        console.error('Error fetching reviews:', error);
+      }
+    );
+  }
 
-  // getUniqueBookTitles(reviews: BookReview[]): string[] {
-  //   const titles = reviews.map((review) => review.bookTitle);
-  //   return Array.from(new Set(titles));
-  // }
+  getUniqueBookTitles(reviews: BookReview[]): string[] {
+    const titles = reviews.map((review) => review.bookTitle);
+    return Array.from(new Set(titles));
+  }
 
   // handleBookTitleChange(event: any): void {
   //   this.showCustomBookInput = event.value === 'custom';
