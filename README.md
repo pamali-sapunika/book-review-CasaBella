@@ -8,7 +8,7 @@
 💡 User Authentication to add, edit or delete review<br>
 🍃 Filter by Review Date, rating or both variables<br><br>
 
-🦋 Users can choose the book title from the dropdown if it has already been reviewed. For books with no prior reviews, feature to add a new book title selecting option 'other'<br><br>
+🦋 Users can choose the book title from the dropdown if it has already been reviewed. <br>For books with no prior reviews, feature to add a new book title selecting option 'other' in the dropdwon<br><br>
 
 1. Navigate to the home page to begin
 2. Home pagedisplays a list of books along with their calculated average ratings with a query. Use the search bar to filter books by their title
