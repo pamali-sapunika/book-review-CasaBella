@@ -1,6 +1,6 @@
-### CasaBella
+# CasaBella
 ## Book Review application
-# CasaBella is a soulful web application designed for book lovers to explore, review, and celebrate their favorite literary works. Developed using Spring Boot and Angular, CasaBella combines robust backend architecture with a sleek and responsive user interface, offering a seamless and enriching experience.<br>
+### CasaBella is a soulful web application designed for book lovers to explore, review, and celebrate their favorite literary works. Developed using Spring Boot and Angular, CasaBella combines robust backend architecture with a sleek and responsive user interface, offering a seamless and enriching experience.<br>
 
 ✨ Developed with Spring Boot and Angular 18<br>
 🍃 Add, View, Modify, and Delete Reviews<br>
